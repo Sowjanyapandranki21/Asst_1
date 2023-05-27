@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="Ass1_09_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+          $(".container").css("background", "aqua");
+        }
+        else {
+          $(".container").css("background", "green");
+        }
+      })
+    })
+  </script>
+  <head>
+  <body>
+    <div class="container">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>BOOTSTRAP</li>
+        <li>JAVASCRIPT</li>
+        <li>REACTJS</li>
+      </ul>
+    </div>
+  </body>
+</html>

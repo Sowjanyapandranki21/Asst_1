@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+      .color-box {
+        width: 100px;
+        height: 100px;
+        margin-top: 30px;
+        margin-left: 450px;
+      }
+      h1{
+        text-align: center;
+        color: crimson;
+        text-decoration: underline;
+      }
+      label{
+        font-size: 20px;
+        color: rgb(69, 1, 86);
+        margin-left: 400px;
+      }
+      select{
+        margin-left: 40px;
+        width:100px;
+        height:30px;
+        font-size: 20px;
+        color: blue;
+        border: 2px solid green;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1> Dropdown Menu</h1>
+  
+    <label for="color-select">Select  Color:</label>
+    <select id="color-select" onchange="changeColor()">
+      <option value=""> color</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+  
+    <div id="color-box" class="color-box"></div>
+  
+    <script>
+      function changeColor() {
+        var colorSelect = document.getElementById("color-select");
+        var colorBox = document.getElementById("color-box");
+        var selectedColor = colorSelect.value;
+        colorBox.style.backgroundColor = selectedColor;
+      }
+    </script>
+  
+  </body>
+</html>

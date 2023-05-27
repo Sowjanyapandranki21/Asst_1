@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="timer">60</h1>
+
+  <script>
+    // Set  initial countdown time
+    let countdownTime = 60;
+
+    // Get timer element
+    const timerElement = document.getElementById("timer");
+
+    // function to update the timer every second
+    function updateTimer() {
+      timerElement.textContent = countdownTime;
+      if (countdownTime === 0) {
+        clearInterval(timerInterval);
+        alert(" Successfully Completed");
+      } else {
+        countdownTime--;
+      }
+    }
+    // Start the timer
+    const timerInterval = setInterval(updateTimer, 1000);
+  </script>
+</body>
+</html>
